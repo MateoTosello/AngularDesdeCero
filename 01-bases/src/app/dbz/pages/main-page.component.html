@@ -1,0 +1,14 @@
+<h1>DBZ personajes</h1>
+<hr>
+
+
+<div class="row">
+  <div class="col">
+    <dbz-list [characterList]="characters" (onDelete)="onDeleteCharacter($event)"></dbz-list>
+    <!-- [characterList]="characters" es el @Input del character list para comunicar del padre (mainpage) al hijo (list) -->
+    <!-- (onDelete) es para escuchar cuando se produce un evento, ="onDeleteCharacter" es lo que queremos que ocurra cuando se produce el evento -->
+  </div>
+  <div class="col">
+    <dbz-add-character (onNewCharacter)="onNewCharacter($event)" ></dbz-add-character>
+  </div>
+</div>
